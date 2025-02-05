@@ -13,7 +13,7 @@ void setFanSpeed(uint8_t new_speed)
     if (new_speed != fanSpdLast)
     {
         fanSpdLast = new_speed;
-        PRINT("Fan speed: "); PRINTLN(fanSpdLast);  
+       // PRINT("Fan speed: "); PRINTLN(fanSpdLast);  
         // constrain();
         analogWrite(fanPin, fanSpdLast);
     }
@@ -21,7 +21,7 @@ void setFanSpeed(uint8_t new_speed)
     #if (DEBUG > 0 )
     uint8_t speedPercent = new_speed;
     map(speedPercent, 0, 255, 0, 100);
-    PRINT("Fan speed: "); PRINTLN(speedPercent);
+   // PRINT("Fan speed: "); PRINTLN(speedPercent);
     #endif
 }
 
