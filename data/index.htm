@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button and LED</title>
+    <style>
+        .led {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .led.on {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button and LED</h1>
+    <button id="toggleButton">Toggle LED</button>
+    <div id="led" class="led"></div>
+
+    <script>
+        const button = document.getElementById('toggleButton');
+        const led = document.getElementById('led');
+
+        button.addEventListener('click', () => {
+            led.classList.toggle('on');
+        });
+    </script>
+</body>
+</html>
